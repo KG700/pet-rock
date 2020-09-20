@@ -1,10 +1,16 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PetRockTest {
-    private PetRock rocky = new PetRock("Rocky");
+    private PetRock rocky;
+
+    @BeforeEach
+    void myTestSetUp() {
+        rocky = new PetRock("Rocky");
+    }
 
     @Test
     void getName() {

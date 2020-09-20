@@ -22,9 +22,15 @@ class PetRockTest {
     }
 
     @Test
-    void name() {
+    void nameFail() {
         assertThrows(IllegalStateException.class, () -> {
-            rocky.printHappyMessage();
+            rocky.getHappyMessage();
         });
+    }
+
+    @Test
+    void name() {
+        rocky.playWithRock();
+        assertEquals("I'm happy!", rocky.getHappyMessage());
     }
 }

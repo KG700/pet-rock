@@ -18,10 +18,10 @@ public class PetRock {
         happy = true;
     }
 
-    public void printHappyMessage() {
+    public String getHappyMessage() {
         if (!happy) {
             throw new IllegalStateException();
         }
-        System.out.println("I'm happ!");
+        return "I'm happy!";
     }
 }

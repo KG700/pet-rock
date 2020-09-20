@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,7 @@ class PetRockTest {
         assertTrue(rocky.isHappy());
     }
 
+    @Disabled("Exception throwing not yet defined")
     @Test
     void nameFail() {
         assertThrows(IllegalStateException.class, () -> {
@@ -33,4 +35,16 @@ class PetRockTest {
         rocky.playWithRock();
         assertEquals("I'm happy!", rocky.getHappyMessage());
     }
+
+    @Test
+    void testFavNum() {
+        assertEquals(42, rocky.getFavNumber());
+    }
+
+    @Test
+    void emptyNameFail() {
+        assertThrows(IllegalStateException.class, () -> {
+            new PetRock("");
+        });
+    };
 }

@@ -3,6 +3,9 @@ public class PetRock {
     private boolean happy = false;
 
     public PetRock(String name) {
+        if (name.isEmpty()) {
+            throw new IllegalStateException();
+        }
         this.name = name;
     }
 
@@ -19,9 +22,13 @@ public class PetRock {
     }
 
     public String getHappyMessage() {
-        if (!happy) {
-            throw new IllegalStateException();
-        }
+//        if (!happy) {
+//            throw new IllegalStateException();
+//        }
         return "I'm happy!";
+    }
+
+    public int getFavNumber() {
+        return 42;
     }
 }

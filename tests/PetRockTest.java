@@ -3,16 +3,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PetRockTest {
+    private PetRock rocky = new PetRock("Rocky");
 
     @Test
     void getName() {
-        PetRock rocky = new PetRock("Rocky");
         assertEquals("Rocky", rocky.getName());
     }
 
     @Test
-    void testHappy() {
-        PetRock rocky = new PetRock("Rocky");
+    void testUnhappyToStart() {
         assertFalse(rocky.isHappy());
+    }
+
+    @Test
+    void testHappyAfterPlay() {
+        rocky.playWithRock();
+        assertTrue(rocky.isHappy());
     }
 }

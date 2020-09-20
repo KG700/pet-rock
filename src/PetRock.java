@@ -13,4 +13,8 @@ public class PetRock {
     public boolean isHappy() {
         return happy;
     }
+
+    public void playWithRock() {
+        happy = true;
+    }
 }

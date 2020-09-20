@@ -2,6 +2,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PetRockTest {
@@ -53,4 +56,13 @@ class PetRockTest {
             new PetRock("");
         });
     };
+
+//    @Test
+//    void waitForHappyTimeout() {
+//        assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
+//            rocky.waitTilHappy();
+//        });
+//
+//    }
+
 }

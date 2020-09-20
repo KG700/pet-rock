@@ -31,4 +31,10 @@ public class PetRock {
     public int getFavNumber() {
         return 42;
     }
+
+//    public void waitTilHappy() {
+//        while (!happy) {
+//            // do nothing!
+//        }
+//    }
 }

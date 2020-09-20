@@ -17,4 +17,11 @@ public class PetRock {
     public void playWithRock() {
         happy = true;
     }
+
+    public void printHappyMessage() {
+        if (!happy) {
+            throw new IllegalStateException();
+        }
+        System.out.println("I'm happ!");
+    }
 }

@@ -9,4 +9,10 @@ class PetRockTest {
         PetRock rocky = new PetRock("Rocky");
         assertEquals("Rocky", rocky.getName());
     }
+
+    @Test
+    void testHappy() {
+        PetRock rocky = new PetRock("Rocky");
+        assertFalse(rocky.isHappy());
+    }
 }
